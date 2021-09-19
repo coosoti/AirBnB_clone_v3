@@ -56,7 +56,7 @@ def create_city(state_id):
     content['state_id'] = state_id
     city = City(**content)
     city.save()
-    return make_response(jsonify(state.to_dict()), 201)
+    return make_response(jsonify(city.to_dict()), 201)
 
 
 @app_views.route('/cities/<string:city_id>', methods=['PUT'],
