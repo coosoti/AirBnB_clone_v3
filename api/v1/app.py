@@ -12,6 +12,7 @@ app.register_blueprint(app_views)
 cors = CORS(app, resources={"/*": {"origins": "0.0.0.0"}})
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
+
 @app.teardown_appcontext
 def teardown_appcontext(code):
     """teardown_appcontext"""
